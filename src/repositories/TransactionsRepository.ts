@@ -31,6 +31,17 @@ class TransactionsRepository {
     let income = 0;
     let outcome = 0;
 
+    // O trecho abaixo está comentado pois fiz apenas para aprendizado
+    // // Com filter e reduce
+    // income = this.transactions
+    //   .filter(t => t.type === this.INCOME_TYPE)
+    //   .reduce((accumulator, transaction) => accumulator + transaction.value, 0);
+
+    // outcome = this.transactions
+    //   .filter(t => t.type === this.OUTCOME_TYPE)
+    //   .reduce((accumulator, transaction) => accumulator + transaction.value, 0);
+
+    // Com apenas um for each
     this.transactions.forEach(transaction => {
       if (transaction.type === this.INCOME_TYPE) {
         income += transaction.value;
